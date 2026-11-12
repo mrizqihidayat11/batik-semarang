@@ -8,10 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "node --test docs/upload.test.mjs docs/metrics.test.mjs docs/storage.test.mjs",
+    "test": "node --test docs/upload.test.mjs docs/metrics.test.mjs docs/storage.test.mjs docs/api-status.test.mjs",
     "test:browser": "node docs/browser-check.mjs",
     "format": "prettier --write src docs/*.mjs vite.config.js tailwind.config.js",
-    "test:browser:api": "node docs/browser-api-check.mjs"
+    "test:browser:api": "node docs/browser-api-check.mjs",
+    "test:connection": "node docs/browser-connection-check.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

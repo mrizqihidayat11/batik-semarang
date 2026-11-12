@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ScanLine, ArrowUpRight } from "lucide-react";
 import Brand from "./Brand";
+import ApiConnectionBar from "./ApiConnectionBar";
 const links = [
   ["/", "Beranda"],
   ["/tentang", "Tentang"],
@@ -9,7 +10,7 @@ const links = [
   ["/data-batik", "Data Batik"],
   ["/evaluasi", "Evaluasi Model"],
 ];
-export default function Navbar() {
+export default function Navbar({ connection }) {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-cream/95 backdrop-blur-xl">
@@ -73,6 +74,7 @@ export default function Navbar() {
           ))}
         </nav>
       )}
+      <ApiConnectionBar connection={connection} />
     </header>
   );
 }

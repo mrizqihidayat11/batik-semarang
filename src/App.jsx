@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Classification from "./pages/Classification";
 import BatikData from "./pages/BatikData";
 import Evaluation from "./pages/Evaluation";
+import useApiStatus from "./hooks/useApiStatus";
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -29,6 +30,7 @@ function ScrollToTop() {
   return null;
 }
 export default function App() {
+  const connection = useApiStatus();
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -39,12 +41,15 @@ export default function App() {
         Lewati ke konten
       </a>
       <div id="top" />
-      <Navbar />
+      <Navbar connection={connection} />
       <main id="main" className="min-h-[65vh]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tentang" element={<About />} />
-          <Route path="/klasifikasi" element={<Classification />} />
+          <Route
+            path="/klasifikasi"
+            element={<Classification connection={connection} />}
+          />
           <Route path="/data-batik" element={<BatikData />} />
           <Route path="/evaluasi" element={<Evaluation />} />
           <Route

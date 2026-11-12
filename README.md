@@ -207,3 +207,12 @@ confusion_matrix.png yang tersedia berasal dari evaluasi Keras pada notebook. Fi
 Jumlah dataset diekstrak dari output sel indeks 3 notebook Klasifikasi_Batik_Semarang_MobileNetV3_Final.ipynb: 3.021 gambar awal, 28 duplikat diabaikan, 2.993 gambar unik. Rincian tiap kelas dan sumber disimpan di backend/evaluation/dataset_summary.json. Backend memvalidasi aritmetika pembersihan, jumlah per kelas, dan mapping sebelum menampilkan total di health/metrics. Total gambar unik ditampilkan di beranda dan informasi evaluasi; 303 sampel uji tetap dicatat terpisah.
 
 Gambar confusion_matrix.png ditampilkan melalui /api/evaluation/keras-confusion-matrix dengan label Keras FP32, sesuai kode sel confusion matrix notebook yang memakai y_pred dari checkpoint Keras. Gambar ini bukan confusion matrix numerik TFLite final. Field confusion_matrix tetap null sampai hasil numerik TFLite diekspor; data Keras tidak disalin untuk mengisi field tersebut. Tampilan menyediakan sumber, penjelasan, dan tautan gambar ukuran penuh.
+
+
+### Indikator koneksi API
+
+Baris status di bawah navbar tampil pada seluruh halaman, dengan status yang sama di halaman Klasifikasi. API aktif (hijau) hanya muncul setelah /api/health merespons status ok dan model_connected true. API tidak terhubung (merah) berarti pemeriksaan gagal; Model belum siap (kuning) berarti backend hidup tetapi model belum dimuat. Mode DEMO ditandai terpisah sesuai konfigurasi prediksi frontend.
+
+Koneksi diperiksa saat aplikasi dibuka, setiap 15 detik saat tab terlihat, dan saat kembali ke tab/jendela. Tombol Cek koneksi memicu pengecekan langsung. Permintaan status dibatasi 5 detik. Satu hook di App berbagi hasil ke navbar dan halaman klasifikasi, sehingga kedua indikator tidak melakukan polling terpisah. Perubahan koneksi tidak memindahkan prediksi API menjadi simulasi.
+
+Jalankan npm run test:connection saat frontend mode API berjalan pada port 5173 untuk menguji status terhubung, model belum siap, backend putus, pemulihan manual, dan deteksi putus otomatis menggunakan respons HTTP uji.

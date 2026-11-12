@@ -38,15 +38,19 @@ await page.route("**/api/predict", async (route) => {
     },
   });
 });
+await page.route("**/api/health", (route) =>
+  route.fulfill({ json: { status: "ok", model_connected: true } }),
+);
 await page.goto("http://127.0.0.1:5174/klasifikasi");
-await page.getByText("Mode API aktif", { exact: true }).waitFor();
 await page
-  .locator("input[type=file]")
-  .setInputFiles({
-    name: "fixture.png",
-    mimeType: "image/png",
-    buffer: readFileSync("docs/screenshots/classification-desktop.png"),
-  });
+  .getByRole("banner")
+  .getByText("API aktif", { exact: true })
+  .waitFor();
+await page.locator("input[type=file]").setInputFiles({
+  name: "fixture.png",
+  mimeType: "image/png",
+  buffer: readFileSync("docs/screenshots/classification-desktop.png"),
+});
 await page
   .getByRole("button", { name: "Mulai Klasifikasi", exact: true })
   .click();

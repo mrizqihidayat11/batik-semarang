@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import PageIntro from "../components/PageIntro";
+import { ApiStatusBadge } from "../components/ApiConnectionBar";
 import UploadBox from "../components/UploadBox";
 import PredictionResult from "../components/PredictionResult";
 import LoadingState from "../components/LoadingState";
@@ -19,7 +20,7 @@ import Button from "../components/Button";
 import useClassification from "../hooks/useClassification";
 import { DEMO_MODE } from "../services/api";
 import { readHistory, writeHistory } from "../utils/storage";
-export default function Classification() {
+export default function Classification({ connection }) {
   const {
     file,
     preview,
@@ -81,12 +82,7 @@ export default function Classification() {
         }
         description="Unggah foto batik untuk melihat prediksi kelas, confidence, dan perbandingan tiga motif teratas."
       >
-        <span
-          className={`flex items-center gap-2 rounded-full border px-3 py-2 text-[10px] ${DEMO_MODE ? "border-gold/40 bg-gold/10 text-brown" : "border-line bg-paper text-navy"}`}
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-          {DEMO_MODE ? "Mode DEMO aktif" : "Mode API aktif"}
-        </span>
+        <ApiStatusBadge connection={connection} />
       </PageIntro>
       <div className="mb-6 flex gap-3 rounded-lg border border-gold/25 bg-[#F0E9DA] px-4 py-3.5 text-xs leading-6 text-brown">
         <Sparkles size={18} className="mt-0.5 shrink-0" />
@@ -99,9 +95,7 @@ export default function Classification() {
             </>
           ) : (
             <>
-              <strong>Mode API.</strong> Gambar dikirim ke backend yang
-              dikonfigurasi. Prediksi tersedia setelah model dan preprocessing
-              training dihubungkan.
+              <strong>{connection.label}.</strong> {connection.message}
             </>
           )}
         </p>
