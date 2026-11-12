@@ -1,0 +1,52 @@
+{
+  "initial_images": 3021,
+  "duplicates_removed": 28,
+  "unique_images": 2993,
+  "per_class": [
+    {
+      "class_name": "Batik Cap Asem Arang",
+      "count": 300
+    },
+    {
+      "class_name": "Batik Cap Asem Sinom",
+      "count": 296
+    },
+    {
+      "class_name": "Batik Cap Asem Warak",
+      "count": 308
+    },
+    {
+      "class_name": "Batik Cap Blekok",
+      "count": 295
+    },
+    {
+      "class_name": "Batik Cap Blekok Warak",
+      "count": 300
+    },
+    {
+      "class_name": "Batik Cap Gambang Semarangan",
+      "count": 304
+    },
+    {
+      "class_name": "Batik Cap Kembang Sepatu",
+      "count": 299
+    },
+    {
+      "class_name": "Batik Cap Semarangan",
+      "count": 299
+    },
+    {
+      "class_name": "Batik Cap Tugu Muda",
+      "count": 295
+    },
+    {
+      "class_name": "Batik Cap Warak Beras Utah",
+      "count": 297
+    }
+  ],
+  "source": {
+    "file": "Klasifikasi_Batik_Semarang_MobileNetV3_Final.ipynb",
+    "cell_index": 3,
+    "description": "Output daftar kelas dan pembersihan duplikat dari notebook training."
+  }
+}

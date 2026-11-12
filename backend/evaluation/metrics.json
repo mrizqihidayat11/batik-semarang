@@ -1,0 +1,100 @@
+{
+  "available": true,
+  "is_demo": false,
+  "classes": [
+    "Batik Cap Asem Arang",
+    "Batik Cap Asem Sinom",
+    "Batik Cap Asem Warak",
+    "Batik Cap Blekok",
+    "Batik Cap Blekok Warak",
+    "Batik Cap Gambang Semarangan",
+    "Batik Cap Kembang Sepatu",
+    "Batik Cap Semarangan",
+    "Batik Cap Tugu Muda",
+    "Batik Cap Warak Beras Utah"
+  ],
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "averaging": "macro",
+  "test_samples": 303,
+  "classification_report": [
+    {
+      "class_name": "Batik Cap Asem Arang",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class_name": "Batik Cap Asem Sinom",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class_name": "Batik Cap Asem Warak",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 31
+    },
+    {
+      "class_name": "Batik Cap Blekok",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class_name": "Batik Cap Blekok Warak",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class_name": "Batik Cap Gambang Semarangan",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 31
+    },
+    {
+      "class_name": "Batik Cap Kembang Sepatu",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class_name": "Batik Cap Semarangan",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 31
+    },
+    {
+      "class_name": "Batik Cap Tugu Muda",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    {
+      "class_name": "Batik Cap Warak Beras Utah",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    }
+  ],
+  "confusion_matrix": null,
+  "history": [],
+  "source": {
+    "file": "classification_report_tflite_test.csv",
+    "type": "colab_classification_report_csv"
+  }
+}

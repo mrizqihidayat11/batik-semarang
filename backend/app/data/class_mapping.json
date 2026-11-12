@@ -1,0 +1,16 @@
+{
+  "verified_from_training": true,
+  "classes": [
+    "Batik Cap Asem Arang",
+    "Batik Cap Asem Sinom",
+    "Batik Cap Asem Warak",
+    "Batik Cap Blekok",
+    "Batik Cap Blekok Warak",
+    "Batik Cap Gambang Semarangan",
+    "Batik Cap Kembang Sepatu",
+    "Batik Cap Semarangan",
+    "Batik Cap Tugu Muda",
+    "Batik Cap Warak Beras Utah"
+  ],
+  "source": "models/labels.txt; verified against models/preprocess_spec.json"
+}

@@ -7,11 +7,17 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test docs/upload.test.mjs docs/metrics.test.mjs docs/storage.test.mjs",
+    "test:browser": "node docs/browser-check.mjs",
+    "format": "prettier --write src docs/*.mjs vite.config.js tailwind.config.js",
+    "test:browser:api": "node docs/browser-api-check.mjs"
   },
   "dependencies": {
+    "lucide-react": "^0.468.0",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "react-router-dom": "npm:react-router@^7.18.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -23,8 +29,13 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.7",
     "globals": "^17.13.0",
+    "playwright-core": "^1.64.1",
     "postcss": "^8.5.32",
+    "prettier": "^3.9.10",
     "tailwindcss": "^3.4.19",
     "vite": "^8.3.6"
+  },
+  "optionalDependencies": {
+    "recharts": "^3.0.0"
   }
 }

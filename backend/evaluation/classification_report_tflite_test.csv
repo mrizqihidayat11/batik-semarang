@@ -1,0 +1,14 @@
+,precision,recall,f1-score,support
+Batik Cap Asem Arang,1.0,1.0,1.0,30.0
+Batik Cap Asem Sinom,1.0,1.0,1.0,30.0
+Batik Cap Asem Warak,1.0,1.0,1.0,31.0
+Batik Cap Blekok,1.0,1.0,1.0,30.0
+Batik Cap Blekok Warak,1.0,1.0,1.0,30.0
+Batik Cap Gambang Semarangan,1.0,1.0,1.0,31.0
+Batik Cap Kembang Sepatu,1.0,1.0,1.0,30.0
+Batik Cap Semarangan,1.0,1.0,1.0,31.0
+Batik Cap Tugu Muda,1.0,1.0,1.0,30.0
+Batik Cap Warak Beras Utah,1.0,1.0,1.0,30.0
+accuracy,1.0,1.0,1.0,1.0
+macro avg,1.0,1.0,1.0,303.0
+weighted avg,1.0,1.0,1.0,303.0
